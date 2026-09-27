@@ -11,7 +11,7 @@ class E5052BInterface(abc.ABC):
 		"""
 
 	@abc.abstractmethod
-	async def init_pn_meas(self, off_start: float, off_end: float, nom_freq: float) -> None:
+	async def init_pn_meas(self, off_start: float, off_end: float, nom_freq: float) -> int:
 		"""Initialise phase noise measurement
 		
 		Arguments
@@ -21,7 +21,7 @@ class E5052BInterface(abc.ABC):
 		"""
 
 	@abc.abstractmethod
-	async def init_am_meas(self, off_start, off_end, nom_freq) -> None:
+	async def init_am_meas(self, off_start, off_end, nom_freq) -> int:
 		"""Initialise amplitude noise measurement
 	
 		Arguments
