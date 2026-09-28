@@ -1,4 +1,4 @@
-from e5052b_I import E5052BInterface
+from e5052b_driver.e5052b_I import E5052BInterface
 
 class E5052BSim(E5052BInterface):
 

@@ -1,4 +1,4 @@
-from e5052b_I import E5052BInterface
+from e5052b_driver.e5052b_I import E5052BInterface
 import vxi11
 from enum import Enum
 
