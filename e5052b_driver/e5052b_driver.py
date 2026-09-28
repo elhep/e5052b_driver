@@ -37,8 +37,8 @@ class E5052B(E5052BInterface):
 
 		if off_start not in START_FREQS or off_end not in PN_STOP_FREQS:
 			return -1
-		self._dev.write(f":SENSe:PN1:PN1:FREQuency:STARt {off_start}")
-		self._dev.write(f":SENSe:PN1:PN1:FREQuency:STOP {off_end}")
+		self._dev.write(f":SENSe:PN1:FREQuency:STARt {off_start}")
+		self._dev.write(f":SENSe:PN1:FREQuency:STOP {off_end}")
 
 		self._dev.write(":INITiate:PN1:IMMediate")
 		return 0
@@ -54,8 +54,8 @@ class E5052B(E5052BInterface):
 
 		if off_start not in START_FREQS or off_end not in AM_STOP_FREQS:
 			return -1
-		self._dev.write(f":SENSe:PN1:AM1:FREQuency:STARt {off_start}")
-		self._dev.write(f":SENSe:PN1:AM1:FREQuency:STOP {off_end}")
+		self._dev.write(f":SENSe:AM1:FREQuency:STARt {off_start}")
+		self._dev.write(f":SENSe:AM1:FREQuency:STOP {off_end}")
 
 		self._dev.write(":INITiate:AM1:IMMediate")
 		return 0
