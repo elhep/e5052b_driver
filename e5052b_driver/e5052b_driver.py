@@ -62,13 +62,13 @@ class E5052B(E5052BInterface):
 
 	async def get_pn_data(self):
 		x_data = [float(val) for val in self._dev.ask(":CALCulate:PN1:DATA:XDATA?").split(",")]
-		p_data = [float(val) for val in self._dev.ask(":CALCulate:PN1:DATA:PDATA?").split(",")] #TODO Check if RDATA is better
+		p_data = [float(val) for val in self._dev.ask(":CALCulate:PN1:DATA:RDATA?").split(",")] #TODO Check if RDATA is better
 		carr = [float(val) for val in self._dev.ask(":CALCulate:PN1:DATA:CARRier?").split(",")]
 		return carr[0], carr[1], x_data, p_data
 	
 	async def get_am_data(self):
 		x_data = [float(val) for val in self._dev.ask(":CALCulate:AM1:DATA:XDATA?").split(",")]
-		p_data = [float(val) for val in self._dev.ask(":CALCulate:AM1:DATA:PDATA?").split(",")] #TODO Check if RDATA is better
+		p_data = [float(val) for val in self._dev.ask(":CALCulate:AM1:DATA:RDATA?").split(",")] #TODO Check if RDATA is better
 		carr = [float(val) for val in self._dev.ask(":CALCulate:AM1:DATA:CARRier?").split(",")]
 		return carr[0], carr[1], x_data, p_data
 
